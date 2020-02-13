@@ -11,10 +11,25 @@ chmod 777 /usr/share/wallpapers
 
 # generate the config for slick-greeter if it doesn't already exist
 slickconf="/etc/lightdm/slick-greeter.conf"
+
+# if the file doesnt exist, generate the most basic config.
 if ! [[ -f $slickconf ]]; then
   touch $slickconf
   echo "[Greeter]" >> $slickconf
   echo "background=/usr/share/wallpapers/wal" >> $slickconf
+
+# if the file exists, insert or change background=/usr/share/wallpapers/wal in the right place.
 else
-  sed -i.slickbk "s/background=.*/background=\/usr\/share\/wallpapers\/wal/g" /etc/lightdm/slick-greeter.conf
+  if grep -Fxq "[Greeter]" $slickconf
+  then
+    if grep -Fq "background" $slickconf
+    then
+      sed -i.slickbk "s/background=.*/background=\/usr\/share\/wallpapers\/wal/g" $slickconf
+    else
+      sed '/\[Greeter\]/a background=\/usr\/share\/wallpapers\/wal/' $slickconf
+    fi
+  else
+    echo "[Greeter]" >> $slickconf
+    echo "background=/usr/share/wallpapers/wal" >> $slickconf
+  fi
 fi
