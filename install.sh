@@ -26,7 +26,7 @@ else
     then
       sed -i.slickbk "s/background=.*/background=\/usr\/share\/wallpapers\/wal/g" $slickconf
     else
-      sed '/\[Greeter\]/a background=\/usr\/share\/wallpapers\/wal/' $slickconf
+      sed -i.slickb '/\[Greeter\]/a background=\/usr\/share\/wallpapers\/wal/' $slickconf
     fi
   else
     echo "[Greeter]" >> $slickconf
