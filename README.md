@@ -8,7 +8,7 @@ Once the install script has been run, simply use the command `reTheme <path-to-i
 # Installation
 
 ```
-sudo chmod 777 install.sh
+sudo chmod +x install.sh
 sudo ./install.sh
 reTheme (cat $HOME/.cache/wal/wal)
 ```
