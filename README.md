@@ -22,7 +22,7 @@ When the install script is run, the commands `reTheme` and `slick-pywal` can be 
 The `reTheme` script works just like the `wal -i <path-to-image>` command would, except it updates the file that
 slick-greeter gets it's wallpaper from in addition to calling wal on the image.
 
-### Example usage:
+#### Example
 ```
 reTheme <path-to-image>
 ```
@@ -30,7 +30,7 @@ reTheme <path-to-image>
 The `slick-pywal` script just copies the last image that wal was invoked on to the file that slick-greeter gets
 it's wallpaper from.
 
-### Example usage:
+#### Example
 ```
 slick-pywal
 ```
