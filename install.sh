@@ -1,7 +1,9 @@
 #!/bin/bash
-FILEPATH=$(readlink -f "reTheme")
+FILEPATH_R=$(readlink -f "reTheme")
+FILEPATH_S=$(readlink -f "slick-pywal")
 
-ln -s $FILEPATH /usr/local/bin/reTheme
+ln -s $FILEPATH_R /usr/local/bin/reTheme
+ln -s $FILEPATH_S /usr/local/bin/slick-pywal
 
 # make the directory for the lightdm background image with the correct permissions.
 if ! [ -d /usr/share/wallpapers ]; then

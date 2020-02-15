@@ -1,0 +1,5 @@
+#!/bin/bash
+FILEPATH=$(cat $HOME/.cache/wal/wal)
+cp $FILEPATH "/usr/share/wallpapers/wal"
+
+echo "slick-greeter background updated"
