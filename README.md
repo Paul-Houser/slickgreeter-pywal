@@ -16,6 +16,8 @@ sudo chmod +x install.sh
 sudo ./install.sh
 reTheme (cat $HOME/.cache/wal/wal)
 ```
+Note that on line 3: `(cat $HOME/.cache/wal/wal)` can be replaced with the full path to any image.
+
 ## Usage
 When the install script is run, the commands `reTheme` and `slick-pywal` can be run from the terminal.
 
