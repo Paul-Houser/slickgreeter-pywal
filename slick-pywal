@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 FILEPATH=$(cat "$HOME"/.cache/wal/wal)
 cp "$FILEPATH" "/usr/share/wallpapers/wal"
 

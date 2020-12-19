@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 FILEPATH="$1"
 wal -i "$FILEPATH"
