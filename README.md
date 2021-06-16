@@ -14,7 +14,7 @@ Once the install script has been run, simply use the command `reTheme <path-to-i
 ```
 sudo chmod +x install.sh
 sudo ./install.sh
-reTheme (cat $HOME/.cache/wal/wal)
+reTheme $(cat $HOME/.cache/wal/wal)
 ```
 Note that on line 3: `(cat $HOME/.cache/wal/wal)` can be replaced with the full path to any image.
 
